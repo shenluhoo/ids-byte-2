@@ -24,14 +24,14 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     autoescape=True)
 
 # This API key is provided by google as described in the tutorial
-API_KEY = 'XXxxXxXXXXxxNXXxXXXxxxNNXXxxxxxxxXXXxXX'
+API_KEY = 'AIzaSyB-8-cTWN2Vr0owUBc5fkckkcShd1NLmvA'
 
 # This uses discovery to create an object that can talk to the 
 # fusion tables API using the developer key
 service = build('fusiontables', 'v1', developerKey=API_KEY)
 
 # This is the table id for the fusion table
-TABLE_ID = 'NxxxNXxXxxNxXXXXNXxXXXxXxxxNxXxNxXxxXxxX'
+TABLE_ID = ''
 
 # This is the default columns for the query
 query_cols = []
@@ -71,7 +71,7 @@ def make_query(cols, values, limit):
     string_values = string_values[2:len(string_values)]
     
     #Change this query to have your corresponding column (in our soccer example, the column for our WHERE is Scorer).
-    query = "SELECT " + string_cols + " FROM " + TABLE_ID + " WHERE Scorer = '" + string_values + "'"
+    query = "SELECT " + string_cols + " FROM " + TABLE_ID + " WHERE Cause_Name = '" + string_values + "'"
 
     query = query + " LIMIT " + str(limit)
 
