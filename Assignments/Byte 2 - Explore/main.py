@@ -31,11 +31,11 @@ API_KEY = 'AIzaSyB-8-cTWN2Vr0owUBc5fkckkcShd1NLmvA'
 service = build('fusiontables', 'v1', developerKey=API_KEY)
 
 # This is the table id for the fusion table
-TABLE_ID = ''
+TABLE_ID = '1YF-JHz_NIZoHedaUQ46DvoRXicNv4Y3_WUwc-NsB'
 
 # This is the default columns for the query
 query_cols = []
-query_values = ['Forlan'] #Change to be the value(s) you're querying in the column you've specified
+query_values = ['Stroke'] #Change to be the value(s) you're querying in the column you've specified
 
 # Import the Flask Framework
 from flask import Flask, request
@@ -47,7 +47,8 @@ def get_all_data(query):
     #response = service.query().sql(sql=query).execute()
     #logging.info(response['columns'])
     #logging.info(response['rows'])
-    
+    #query = "SELECT * FROM " + TABLE_ID + " WHERE  Cause_Name = 'Stroke' LIMIT 5"
+
     response = service.query().sql(sql=query).execute()
     logging.info(response['columns'])
     logging.info(response['rows'])
@@ -87,7 +88,7 @@ def make_query(cols, values, limit):
 def index():
     template = JINJA_ENVIRONMENT.get_template('templates/index.html')
     request = service.column().list(tableId=TABLE_ID)
-    res = get_all_data(make_query([], query_values, 5)) #5 is our limit we're passing in
+    res = get_all_data(make_query([], query_values, 10)) #5 is our limit we're passing in
     logging.info('allheaders')
     return template.render(columns=res['columns'], rows = res['rows'] )
 
