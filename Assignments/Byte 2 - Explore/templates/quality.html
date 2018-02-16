@@ -52,26 +52,33 @@
 
     
       <div class="page-header">
-	<h2>Is the data complete?</h2>
-	<p>I used Trifacta to wrangle this dataset. In two of the columns, "Deaths" and "Age_adjusted_Death_Rate", about 1% of the data is missing. 
-	This can be result in misleading results when people conduct further quantitative anlysis related to age and number of deaths, whether by states, or by other criteria.</p>
+		<h2>Is the data complete?</h2>
+		<p>I used Trifacta to wrangle this dataset. In two of the columns, "Deaths" and "Age_adjusted_Death_Rate", about 1% of the data is missing. 
+		This can be result in misleading results when people conduct further quantitative anlysis related to age and number of deaths, whether by states, or by other criteria.</p>
+	  	<a href="https://ibb.co/cnEGan"><img src="https://preview.ibb.co/jNU4T7/Original_Dataset.png" alt="Original_Dataset"></a>
+	  	<p>The orginal data status(Click the image to enlarge)</p>
       </div>
       
       <div class="page-header">
-	<h2>Is the data coherent?</h2>
-	<p>The data is well organized and make sense relative to itself and it does match my expectations. 
-	I used the chart in Google Fusiontable to do simple visualizations of the dataset. Overall, the data distribution seems to follow a sensible pattern. However,
-	there are some outliners for "All Causes" under "Cause_Name" category. In 2007, the number was significantly higher than other years, and other causes, which
-	might need further examination if we want to use the dataset for analysis.</p>
+		<h2>Is the data coherent?</h2>
+		<p>The data is well organized and make sense relative to itself and it does match my expectations. 
+		I used the chart in Google Fusiontable to do simple visualizations of the dataset. Overall, the data distribution seems to follow a sensible pattern. However,
+		there are some outliners for "All Causes" under "Cause_Name" category. In 2007, the number was significantly higher than other years, and other causes, which
+		might need further examination if we want to use the dataset for analysis.</p>
       </div>
 
       <div class="page-header">
-	<h2>Is the data correct?</h2>
-	<p>What aspects of this data can you verify? How did you do so? What did
-	you find?
-	On the high level, I used Trifacta to do some basic data cleaning. Under the "State" column, </p>
+		<h2>Is the data correct?</h2>
+		<p>What aspects of this data can you verify? How did you do so? What did
+		you find?
+		On the high level, I used Trifacta to do some basic data cleaning. Under the "State" column, there are some mismatched value under "State" 
+		colunm where instead of a state's name, it wrote "United States". I couldn't verify whether it's a mistake or intentional. The numbers are usually 
+		significantly larger than other states in the same disease category. I decided to eliminate those data from the dataset. Otherwise, I also looked for 
+		other resources in leading causes of death in the united states, but I haven't found one as comprehensive as the one published by NCHS. I briefly 
+		looked through the same dataset published in previous years, and there aren't much discrepancy. Thus, I consider this data generally correct.</p>
+		<img src="https://preview.ibb.co/gQGjT7/Steps_taken.png" alt="Steps_taken" border="0">
+		<p>Steps taken to clean the data</p>
       </div>
-
     </div> <!-- /container -->
 
 
